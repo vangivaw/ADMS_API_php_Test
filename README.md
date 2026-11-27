@@ -26,12 +26,12 @@ Sistem ini dirancang untuk menggantikan proses penarikan data absensi manual men
 
 1. **Clone Repositori**
    ```bash
-   git clone [https://github.com/username-anda/absensi-adms-php.git](https://github.com/username-anda/absensi-adms-php.git)
-   cd absensi-adms-php
+   git clone [https://github.com/vangivaw/ADMS_API_php_Test.git]
+   cd ADMS_API_php_Test
    ```
 
 2. **Konfigurasi Database**
-   - Buat database baru di MySQL/phpMyAdmin bernama `db_absensi_percetakan`.
+   - Buat database baru di MySQL/phpMyAdmin bernama `db_absensi`.
    - Impor file `database.sql` untuk membuat tabel `karyawan` dan `log_absensi`.
 
 3. **Atur Kredensial Koneksi & Token**
@@ -50,7 +50,7 @@ Sistem ini dirancang untuk menggantikan proses penarikan data absensi manual men
 Sebelum menghubungkan mesin fisik, uji *endpoint* API menggunakan cURL atau Postman (`POST` dengan *Body* `raw` -> `Text`, dipisahkan karakter `Tab`):
 
 ```bash
-curl -X POST "http://localhost/absensi-adms-php/api_adms.php?token=TOKEN_ANDA" \
+curl -X POST "http://localhost/adms_api_php_test/api_adms.php?token=TOKEN_ANDA" \
      -H "Content-Type: text/plain" \
      -d "K-001	2026-11-27 07:45:12	0	1"
 ```
